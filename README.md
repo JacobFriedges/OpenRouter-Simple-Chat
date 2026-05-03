@@ -2,17 +2,17 @@
 
 ## OpenRouter Python Chat Examples
 
-This repository contains three progressively more advanced examples of using the OpenRouter API in Python. Each script demonstrates a different way to send messages to an AI model and read the response.
+This repository contains beginner-friendly examples of using the OpenRouter API in Python. Each script demonstrates a different way to send messages to an AI model and read the response.
 
 These examples are designed to be easy to read, easy to modify, and helpful for anyone learning how to work with LLM APIs.
 
 ### 🔧 Requirements
 
 - Python 3.8+
-- `requests` library  
+- `requests` and `python-dotenv` libraries  
   Install with:
   ```
-  pip install requests
+   pip install requests python-dotenv
   ```
 - An OpenRouter API key  
   (Get one at [https://openrouter.ai/](https://openrouter.ai/))
@@ -22,15 +22,17 @@ These examples are designed to be easy to read, easy to modify, and helpful for 
 ### 📁 Project Structure
 ```
 .
-├── 01_basic.py        # Sends a single hard-coded message
-├── 02_interactive.py  # Asks for user input in a loop (type 0 to exit)
-├── 03_history.py      # Full chat system with conversation history
+├── 1SimpleResponse.py        # Sends a single hard-coded message
+├── 2ChatWithInput.py         # Asks for user input in a loop (type 0 to exit)
+├── 3ChatWithHistory.py       # Full chat system with conversation history
+├── 4ChatWithEnv.py           # Reads API key from .env for safer setup
+├── 5SystemPromptPersonality.py # Changes assistant style using system prompts
 └── README.md
 ```
 
 ### 📜 Example Descriptions
 
-1. **01_basic.py**
+1. **1SimpleResponse.py**
 
    A minimal example that sends a single prompt to the model and prints the result.
 
@@ -38,7 +40,7 @@ These examples are designed to be easy to read, easy to modify, and helpful for 
    - Testing your API key
    - Understanding the basic request format
 
-2. **02_interactive.py**
+2. **2ChatWithInput.py**
 
    A simple chat loop that lets you type messages in the terminal. The conversation ends when you type `0`.
 
@@ -46,7 +48,7 @@ These examples are designed to be easy to read, easy to modify, and helpful for 
    - Quick experiments
    - Building a simple CLI chatbot
 
-3. **03_history.py**
+3. **3ChatWithHistory.py**
 
    A more advanced example that stores the entire conversation history and sends it to the model each request.
 
@@ -55,13 +57,23 @@ These examples are designed to be easy to read, easy to modify, and helpful for 
    - More natural interaction
    - Starting point for a real chat app
 
+4. **5SystemPromptPersonality.py**
+
+   Shows how changing the `system` prompt changes the assistant's personality.
+
+   **Good for:**
+   - Tutorials about prompt engineering
+   - Demonstrating style/tone control
+   - Building role-based AI assistants
+
 ### 🚀 Running the Scripts
 
 Run any example with:
 ```bash
-python 01_basic.py
+python 1SimpleResponse.py
 ```
 (or replace with the script you want)
+
 
 ### 📌 Notes
 

@@ -1,7 +1,8 @@
 import requests
 
 API_KEY = ""
-MODEL = "tngtech/tng-r1t-chimera:free"
+MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
+URL = "https://openrouter.ai/api/v1/chat/completions"
 
 # Start with an empty chat history
 chat_history = []
